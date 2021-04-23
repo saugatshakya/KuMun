@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-analytics.js"></script>
+</head>
+<body>    
+<ul id="users">
+    <form id="newUser">
+        <input type="text" name="name" placeholder="name">
+        <button>Add User</button>
+    </form>
+</ul>
+
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyAIhpUSvaxctfeujpsZ4DfLmB_D0-r8rC8",
+    authDomain: "kathmandu-university-mun.firebaseapp.com",
+    databaseURL: "https://kathmandu-university-mun.firebaseio.com",
+    projectId: "kathmandu-university-mun",
+    storageBucket: "kathmandu-university-mun.appspot.com",
+    messagingSenderId: "931975476942",
+    appId: "1:931975476942:web:8e74a58ba4c2ef7e3c829f",
+    measurementId: "G-FL9GVZ1S3C"
+  };
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const db = firebase.firestore();
+  db.settings({ timestampsInSnapshots: true});
+</script>
+<script src="js/db.js"></script>
+</body>
+</html>

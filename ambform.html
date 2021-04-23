@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-analytics.js"></script>
+	<meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="css/montserrat-font.css">
+	<link rel="stylesheet" type="text/css" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="form-v10">
+	<div class="page-content">
+		<div class="form-v10-content">
+			<form class="form-detail" action="#" method="post" id="ambassador">
+				<div class="form-left">
+					<h2 class="text-center">Registration Form</h2><br>
+					<div class="form-row">
+						<input type="text" name="your_email" id="your_email" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Your Email">
+					</div><br>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="first_name" id="first_name" class="input-text" placeholder="First Name" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="last_name" id="last_name" class="input-text" placeholder="Last Name" required>
+						</div>
+					</div><br>
+					<div class="form-group">
+						 <div class="form-row form-row-1">
+							<input type="text" name="code" class="code" id="code" placeholder="Code +" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="phone" class="phone" id="phone" placeholder="Whatsapp Number" required>
+						</div>
+					</div><br>
+					<div class="form-group">
+					  <div class="form-row form-row-3">
+							          <input type="text" name="dob" class="dob" id="dob" placeholder="Date of Birth (YYYY-MM-DD)">
+						</div>
+					</div><br>
+					<div class="form-group">
+					<div class="form-row form-row-1">
+							          <input type="text" name="age" class="age" id="age" placeholder="Age" required>
+						</div>
+					</div><br>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="zip" class="zip" id="zip" placeholder="Zip Code">
+						</div>
+						</div><br>
+						<div class="form-group">
+							<div class="form-row form-row-3">
+								<input type="text" name="university" class="university" id="university" placeholder="University/Institution" required>
+							</div>
+							</div><br>
+							<div class="form-group">
+							<div class="form-row form-row-3">
+								<input type="text" name="study" class="study" id="study" placeholder="Level of Study/Profession" required>
+							</div></div><br>
+						<h2 class="text-center">Native</h2><br>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="ncountry" class="ncountry" id="ncountry" placeholder="Country" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="nprovince" class="nprovince" id="nprovince" placeholder="Province(Optional)">
+						</div></div><br>
+						<div class="form-group"> 
+						<div class="form-row form-row-1">
+							<input type="text" name="ndistrict" class="ndistrict" id="ndistrict" placeholder="District (Optional)">
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="ncity" class="ncity" id="ncity" placeholder="City (Optional)">
+						</div>
+					</div>
+					<br>
+					<h2 class="text-center">Residential</h2><br>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="rcountry" class="rcountry" id="rcountry" placeholder="Country of Residence" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="rprovince" class="rprovince" id="rprovince" placeholder="Province(Optional)">
+						</div></div>
+						<br>
+						<div class="form-group"> 
+						<div class="form-row form-row-1">
+							<input type="text" name="rdistrict" class="rdistrict" id="rdistrict" placeholder="District (Optional)">
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="rcity" class="rcity" id="rcity" placeholder="City(Optional)">
+						</div>
+					</div>
+					<br><br>
+					
+					<div class="form-group"><div class = "form-row form-row-last"><div></div></div></div>
+				</div><div><div><div><br> </div></div></div>
+				<div class="form-right">
+					<div class="form-row form-row-1">
+					<label class="label-input100" for="message">Briefly list down your mun experiences</label>
+					<div class="wrap-input100 validate-input">
+					<textarea id="experience" name="q1" class="input100"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+						</div>
+					<div class="form-row form-row-1">
+					<label class="label-input100" for="message">Have you previously trained other students in mun before? if so, how did you go aboutdoing it? If not,how would you do it if given the opportunity?</label>
+					<div class="wrap-input100 validate-input">
+					<textarea id="previous" name="q2" class="input100"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+						</div>
+					<div class="form-row form-row-1">
+					<label class="label-input100" for="message">As an ambassador how do you expect to get the maximum delegate for SAIMUN? </label>
+					<div class="wrap-input100 validate-input">
+					<textarea id="expect" name="q3" class="input100"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+						</div>
+						<div class="form-row form-row-1">
+					<label class="label-input100" for="message">How can your skills make SAIMUN different and unique from other international Mun? </label>
+					<div class="wrap-input100 validate-input">
+					<textarea id="skill" name="q4" class="input100"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+						</div>
+					<div class="form-row form-row-1">
+					<label class="label-input100" for="message">How can you convince your delegate for saimun and prove its uniqueness to them? </label>
+					<div class="wrap-input100 validate-input">
+					<textarea id="convince" name="q5" class="input100"></textarea>
+					<span class="focus-input100"></span>
+						</div></div>
+						<div class="form-row form-row-1">
+					<label class="label-input100" for="message">Additional Comments(Please add some additional points which can make you more deserving for this post if any)</label>
+					<div class="wrap-input100 validate-input">
+					<textarea id="additional" name="q6" class="input100"></textarea>
+					<span class="focus-input100"></span>
+						</div></div>
+					<div class="form-row-last">
+						<input type="submit" name="register" class="register" value="Register">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script>
+        var firebaseConfig = {
+          apiKey: "AIzaSyAIhpUSvaxctfeujpsZ4DfLmB_D0-r8rC8",
+          authDomain: "kathmandu-university-mun.firebaseapp.com",
+          databaseURL: "https://kathmandu-university-mun.firebaseio.com",
+          projectId: "kathmandu-university-mun",
+          storageBucket: "kathmandu-university-mun.appspot.com",
+          messagingSenderId: "931975476942",
+          appId: "1:931975476942:web:8e74a58ba4c2ef7e3c829f",
+          measurementId: "G-FL9GVZ1S3C"
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true});
+      </script>
+	  <script src="js/ambassador.js"></script>
+</body>
+</html>
